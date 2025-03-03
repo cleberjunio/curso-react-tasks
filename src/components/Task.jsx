@@ -1,4 +1,4 @@
-import { ChevronRight, Trash } from "lucide-react"
+import { ChevronDownIcon, ChevronRight, Trash } from "lucide-react"
 import { useNavigate } from "react-router-dom"
 import Button from "./Button"
 
@@ -21,6 +21,7 @@ const Task = ({ tasks, onDeletedTasks, onCompletedTasks }) => {
               task.isCompleted && "line-through"
             }`}
           >
+            {task.isCompleted && <ChevronDownIcon />}
             {task.title}
             {/*  {task.isCompleted ? "✅" : "❌"} */}
           </button>
