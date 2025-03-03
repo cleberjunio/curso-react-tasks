@@ -17,7 +17,7 @@ const Task = ({ tasks, onDeletedTasks, onCompletedTasks }) => {
         <li key={task.id} className="flex gap-2">
           <button
             onClick={() => onCompletedTasks(task.id)}
-            className={`w-full bg-slate-400 rounded-md text-white text-left p-2 ${
+            className={`w-full bg-slate-400 rounded-md flex items-center gap-2 text-white text-left p-2 ${
               task.isCompleted && "line-through"
             }`}
           >
